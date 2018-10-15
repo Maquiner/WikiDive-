@@ -1,0 +1,14 @@
+ {
+     "manifest_version": 2, 
+     "name": "WikiDive", 
+     "description": "Traces wikipedia searches and produces graphas",
+     "version": "1.0.0",
+     "background":{
+         "scripts":["detection.js"],
+         "persistent": false },
+    "permision": [
+        "activeTab", 
+    "notifications",
+    "declarativeContent"]
+    }
+
