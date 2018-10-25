@@ -1,0 +1,3 @@
+urls = $$('a'); for (url in urls) console.log ( urls[url].href )
+cotente scripts 
+javascript get DOM content 

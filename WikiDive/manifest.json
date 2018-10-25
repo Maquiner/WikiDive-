@@ -1,14 +1,27 @@
- {
-     "manifest_version": 2, 
-     "name": "WikiDive", 
-     "description": "Traces wikipedia searches and produces graphas",
-     "version": "1.0.0",
-     "background":{
-         "scripts":["detection.js"],
-         "persistent": false },
-    "permision": [
-        "activeTab", 
-    "notifications",
-    "declarativeContent"]
-    }
-
+{
+    "manifest_version": 2,
+    "name": "WikiDive",
+    "description": "Traces wikipedia searches and produces graphs",
+    "version": "1.0.0",
+    "browser_action":{
+        "default_icon":"icon.png",
+        "default_title":"WikiDive", 
+        "default_popup":"popup.html"
+    },
+    "background": {
+        "scripts": ["Flow.js"]
+    },
+   
+    "content_scripts": [
+        {"matches": ["*://*.wikipedia.org/*"], 
+        "js": ["urls.js"]
+        }
+    ],
+    "permissions": [
+        "activeTab",
+        "storage",
+        "notifications",
+        "declarativeContent",
+        "webNavigation"
+    ]
+}

@@ -1,45 +1,18 @@
-<!doctype html>
 <html>
-
 <head>
-  <title>WikiDive Launcher</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-    crossorigin="anonymous">
-    <style>
-      body {
-        min-width: 400px;
-      }
-      #data{
-        display: none;
-      }
-      h3{
-        /*margin-bottom: 0px;*/
-        font-weight: lighter;
-        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-        color: #777;
-        font-size: 20px;
-        line-height: 20px;
-      }
-      hr{
-        margin-top: 20px;
-        margin-bottom: 20px;
-      }
-    </style>
-    <link rel="stylesheet" type="text/css" href="buttons.css">
-    <script src="popup.js"></script>
-  </head>
-  <body>
-    <h3 id="title">E<span id="titlex">x</span>port History</h3>
-    <div id="content">
-      <a href="#" id="json" class="button button-rounded button-flat-action">WikiDive.png</a>
-      <a href="#" id="csv" class="button button-rounded button-flat-caution">WikiDive.txt</a>
-    
+  <title>WikiDive</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+<body>
+  <div class="modal-header">
+    <h1 class="logo">
+      <img src="icon2.png" alt="WikiDive" class="logo-icon"> WikiDive <span class="version">(0.0.1)</span>
+    </h1>
+  </div>
+  <small>Your own personal web spyder that traces your Wikipedia searches for you!</small>
+  <div>
+    <button type="button" id="download">Download Data Dive</button>
+  </div>
+  
 
-    <p id="cu" style="display: none">
-      See you in your next dive!
-    </p>
-
-    <div id="data"></div>
-  </body>
+</body>
 </html>
