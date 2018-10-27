@@ -7,11 +7,7 @@
         "default_icon":"icon.png",
         "default_title":"WikiDive", 
         "default_popup":"popup.html"
-    },
-    "background": {
-        "scripts": ["Flow.js"]
-    },
-   
+    }, 
     "content_scripts": [
         {"matches": ["*://*.wikipedia.org/*"], 
         "js": ["urls.js"]
@@ -19,6 +15,7 @@
     ],
     "permissions": [
         "activeTab",
+        "tabs",
         "storage",
         "notifications",
         "declarativeContent",
