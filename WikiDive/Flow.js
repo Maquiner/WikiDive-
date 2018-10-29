@@ -1,16 +1,12 @@
-chrome.webNavigation.onCompleted.addListener(onLoaded, {
-  url: [
-    {hostSuffix: "wikipedia.org"}
-  ]
-});
+var Flow = [];
 
-function onLoaded(event){
-  console.log(event);
+chrome.runtime.onMessage.addListener(gotUrl);
 
-}
+function gotUrl(msg, sender, sendResponse){
+    console.log(msg);
+    Flow.push(msg);
+};
 
-chrome.runtime.onMessage.addListener(gotMessage);
+console.log(Flow);
 
-function gotMessage(message, sender, sendResponse) {
-  console.log(url.txt)
-}
+chrome.runtime.sendMessage(Flow);

@@ -13,6 +13,11 @@
         "js": ["urls.js"]
         }
     ],
+    
+    "background":{
+    "scripts":["Flow.js"]
+    },
+
     "permissions": [
         "activeTab",
         "tabs",

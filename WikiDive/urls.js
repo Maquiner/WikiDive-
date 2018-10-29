@@ -33,9 +33,11 @@ for(i in links){
 
 
 console.log(urls);
+
+chrome.runtime.sendMessage(urls);
+
 var hiddenElement = document.createElement('a');
-    hiddenElement.href = 'urls:text/csv;charset=utf-8,' + encodeURI(urls);
-    hiddenElement.target = '_blank';
+    hiddenElement.href = encodeURI(urls);
     hiddenElement.download = 'urls.csv';
     hiddenElement.click();
 
