@@ -3,22 +3,6 @@
   <title>WikiDive</title>
   <link rel="stylesheet" type="text/css" href="main.css">
 <body>
-    <div>
-        <button type="button" id="download">Download Data Dive</button>
-    </div>
-    <script>
-      var output=[];
-
-      chrome.runtime.onMessage.addListener(gotFlow);
-      function gotUrl(msg, sender, sendResponse){
-      output.push(msg);
-      };
-      var hiddenElement = document.createElement('a');
-      hiddenElement.href = encodeURI(output);
-      hiddenElement.download = 'output.csv';
-      hiddenElement.click("download");
-    </script>
-
   
   <div class="modal-header">
     <h1 class="logo">

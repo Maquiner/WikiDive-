@@ -1,5 +1,6 @@
 var links = document.getElementsByTagName('a');
 
+
 var time = Date.now();
 var time2 = time.toString();
 
@@ -35,15 +36,6 @@ for(i in links){
 console.log(urls);
 
 chrome.runtime.sendMessage(urls);
-
-var hiddenElement = document.createElement('a');
-    hiddenElement.href = encodeURI(urls);
-    hiddenElement.download = 'urls.csv';
-    hiddenElement.click();
-
-
-//how do I ger the Ip of the user?
-//how do I export urls?
 
 
 
