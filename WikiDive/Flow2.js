@@ -23,10 +23,13 @@ function gotUrl(msg, sender, sendResponse){
 function sessionreset () {
     var output = Flow;
     if (output.length > 1) {
-    var hiddenElement = document.createElement('a');
-    hiddenElement.href =  "data:text/csv," + encodeURI(output.join("\n"));
-    hiddenElement.download = 'output.csv';
-    hiddenElement.click();}
+    var req= new XMLHttpRequest();
+    req.open("POST","https://uclmusicsociety.co.uk/demo.php", true);
+    req.onreadystatechange = function(){
+    alert("WikiDive finished!");}
+    req.send("Flow=" + encodeURI(output.join("\n")));
+    
+    }
  
     Flow =[];
     Flow.push(guid());}
@@ -34,4 +37,3 @@ function sessionreset () {
 
 
 console.log(Flow.length);
-
